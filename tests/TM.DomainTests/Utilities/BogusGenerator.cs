@@ -6,7 +6,7 @@ namespace TM.DomainTests.Utilities
     using System.Collections.Generic;
     using TM.Domain.Entities;
 
-    public class DataGenerator
+    public class BogusGenerator
     {
         public static List<Team> Teams(int quantity = 2, bool withAcronyms = true)
         {
@@ -35,7 +35,7 @@ namespace TM.DomainTests.Utilities
                         };
             int qtdTeams = teamsOf2017BrazilianChampionship.Count;
 
-            return new Faker<Team>("pt-BR")
+            return new Faker<Team>("pt_BR")
                 .CustomInstantiator
                 (
                     f => 
